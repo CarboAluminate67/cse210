@@ -1,0 +1,50 @@
+Program Specifications
+    1. The program is meant to allow easy journal entries, saving, and viewing to encourage people to use journals.
+    2. The main inputs are in the menu when deciding which actions to take (ie. write, save, quit). Then of course input to write entries.
+    3. The main output it would produce would be the display of all journal entries, as well as the main menu.
+    4. The program ends when the user saves the file and closes the digital journal.
+
+Classes in the project
+    The best classes for this project would be a Journal class to save the journal files, an Entry class to create and store new entries in
+journals, and a PromptGenerator class to randomly generate from a list of prompts.
+
+Class behaviors
+    Journal
+        This class needs to be able to save all of its entries to a text file, view and display all of its entries, and add new entries to its file.
+    Entry
+        This class should be able to give a prompt, and then store the three attributes, date, prompt, and response.
+    PromptGenerator
+        This class simply needs a method to randomly select from the list of prompts and return it to the user.
+
+Class attributes
+    Journal
+        This class needs to store entries of the Entry data type. 
+    Entry
+        This class will have 3 main attributes it stores for each instance: a date(DateTime), a prompt(string), and finally the response(string)
+    PromptGenerator
+        This class will store a list of potential prompts that it can give to the user while writing.
+
+Class diagrams
+    Journal
+        _entries: list<Entry>
+        
+        save()
+        display()
+    Entry
+        _date: DateTime
+        _prompt: string
+        _response: string
+
+        getEntry()
+        getDate()
+    PromptGenerator
+        _prompts: list<string>
+
+        givePrompt()
+
+How it will run
+    First the user will choose if they want to 1. write an entry, 2. display the given journal, 3. load a new journal, 4. save the current journal,
+    5. quit the program. To write they will be given a prompt by the PromptGenerator class, then their response along with the prompt and date will
+    be stored by the Entry class. Finally this entry will be stored with the Journal class, and they will return to the menu where the process 
+    begins again.
+
