@@ -42,7 +42,7 @@ public class Journal
         }
     }
 
-    public void Clear(){
+    public void Clear(){ // The clear method simply writes a single blank line to the journal txt file to delete its contents.
         Console.Write("Filename: ");
         string fileName = Console.ReadLine();
 

@@ -34,7 +34,7 @@ class Program
                 journal.Save();
             }
 
-            if (menuChoice == "5"){
+            if (menuChoice == "5"){ //Here I exceeded requirements by adding a method to clear the contents of a journ txt file to start fresh.
                 journal.Clear();
             }
 
