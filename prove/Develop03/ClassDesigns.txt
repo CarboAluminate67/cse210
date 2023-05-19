@@ -1,0 +1,4 @@
+Classes:
+Scripture
+Reference
+Words
