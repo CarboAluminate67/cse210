@@ -1,4 +1,41 @@
-Classes:
-Scripture
-Reference
-Words
+Program Specifications:
+        The program is meant to store a given scripture as well as the reference, and slowly overtime hide words so the user can memorize them. 
+    Overtime the scripture will slowly dissapear and it will be memorized entirely.
+        The user inputs would be first the scripture reference and text to be memorized. Then either the enter key to continue, or 'quit' to 
+    end the program.
+        The program would output the same scripture reference and text with less and less words each time.
+    Whenever the user enters 'quit' or when all the words have been removed.
+
+Classes
+    Scripture
+        list<Word> _scriptureText //list of Word type words that can be hidden or shown
+        Reference reference //store reference of scripture
+
+        void DisplayScripture() //clear console and display scripture with certain hidden words
+        void HideWords() //Hide random words
+        bool AllHidden() //Checks if all words are hidden
+
+        Scripture(string scripture, string reference)
+    Reference
+        string _book
+        string _chapter
+        string _startVerse
+        string _endVerse
+
+        Reference(book, chapter, verse)
+        Reference(book, chapter, startVerse, endVerse)
+
+        giveBook() //returns book from reference
+        giveChapter()
+        giveStartVerse()
+        giveEndVerse()
+    Word
+        bool _hidden //identifies if the word is shown or hidden
+        string _word //the text of the word
+
+        Word(string word) //inputs text of the word
+
+        Hide() //toggles _hidden attribute
+        IsHidden() //returns status of _hidden attribute
+        ShowWord() //returns the _word attribute
+
