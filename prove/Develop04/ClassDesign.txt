@@ -1,0 +1,53 @@
+Mindfullness program
+
+    The program will run an user through a series of mindfullness activities to reflect. The main user inputs would be in the menu deciding which activity to 
+do. After this, the only input would be anything the user lists in the 'listing' activity, and the number of second they want to participate in each activity.
+The output would be the menu, messages, and timers/animations that guide the user through each activity. The program ends when the user decides by inputting
+'quit' in the menu.
+
+Classes
+    Menu Class
+        Behaviors
+            Display menu
+            Receiving/processing input
+
+    Activity Class
+        Behaviors 
+            Starting message
+            End message
+            Spinner
+            Countdown
+        Attributes
+            string Activity
+            string Description
+            int Duration
+        Constructors
+            Initializes activity and duration based on menu input. Description is set based on activity.
+
+    Breathing Class
+        Behaviors
+            Display breath message
+        Attributes
+            boolean In/Out 
+
+    Reflecting Class
+        Behaviors
+            Get Prompt
+            Get Question
+            Display Prompt
+            Display Question and get answer
+        Attributes
+            list<string> Prompt list
+            list<string> Question list
+
+    Listing Class
+        Behaviors
+            Get Prompt
+            Count answer
+            Display answer Count
+        Attributes
+            list<string> Prompt list
+            list<string> Answer list
+    
+
+
