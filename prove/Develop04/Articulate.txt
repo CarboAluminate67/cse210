@@ -1,0 +1,37 @@
+    Inheritence is the ability for one class to 'absorb' the attributes, methods, and properties of a 'parent' class, thereby becoming a subclass or 'child'
+class. If a class is a child of a parent class it is said to always be an instance of that parent class. ie. child IS A parent. In the same way a quarter is
+a coin. One large benefit of inheritence is to avoid duplicate code. If you need several classes that all have certain attributes or methods in common, you
+are able to make a broad class that covers all the commonalities, and then make subclasses for the specific behaviors and attributes of the class.
+Inheritence also helps abstract code and allows for simpler coding in the main program. One application of this could be perhaps making an in depth program
+that logs and tracks different kinds of one broad item. For example, not too long ago I made a program that I used to record and sort different engines in 
+a space simulator game I play. In my project I had a single engine class with a large number of attributes and methods, and not all were used in every engine
+object. With inheritence I could make an engine class for the needed things, like engine name, type, calculating efficiency etc. Then use inheritence and
+make child classes for more specific engine types, such as a staged-combustion engines, gas-generator engines, etc.
+
+Here is a code example in the mindfullness program using inheritence:
+
+public class Activity
+{
+    private string _activity;
+    private string _description;
+    protected int _duration;
+
+    public Activity(string act, string des)
+    {
+        _activity = act;
+        _description = des;
+    }
+    ....
+}
+
+
+public class Breathing : Activity
+{
+    public Breathing(string act, string des) : base(act, des)
+    {
+    }
+    ....
+}
+
+This code makes a broad activity class with universal attributes and behaviors, then a more specific breathing activity class. The breathing class
+automatically has all the attributes and behaviors of an activity class, meaning I do not have to re-code the same behaviors for each kind of activity.
