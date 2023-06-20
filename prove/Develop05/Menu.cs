@@ -2,6 +2,7 @@ public class Menu
 {
     private string _fileName;
     private int _points = 0;
+    private List<Goal> _goals = new List<Goal>();
 
     public Menu()
     {
