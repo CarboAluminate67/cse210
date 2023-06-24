@@ -17,7 +17,7 @@ class Program
 
             if (option == "2")
             {
-                menu.ListGoals();
+                menu.ListGoals(); //Included counter for number of times Eternal goals have been completed
                 Console.ReadLine();
             }
 
@@ -37,8 +37,8 @@ class Program
                 Console.Write($"\r\nWhich goal did you accomplish? ");
                 string choice = Console.ReadLine();
 
-                int points = menu.GetGoals()[int.Parse(choice) - 1].RecordEvent();
-                menu.AddPoints(points);
+                int points = menu.GetGoals()[int.Parse(choice) - 1].RecordEvent(); //Added code in RecordEvent override methods to prevent extra points received from finishing simple and checklist goals more than allowed
+                menu.AddPoints(points); 
             }
 
             if (option == "6")
