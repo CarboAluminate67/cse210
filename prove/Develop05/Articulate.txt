@@ -1,0 +1,34 @@
+Polymorphism is the ability for code to behave differently given the circumetstances. It makes a program more adaptable, versatile, and less error prone when
+working with inheritence in Object Oriented Programming. Using polymorphism, one function with the same name, can be overwritten and behave in a different
+manner when it is used by a different child class. This principle has many benefits, including large amounts of reduction in repeating code, it promotes
+encapsulation, and makes it far easier to manage the differences in varying child classes without re-revising the same function for every child class. One
+example use of polymorphism is when you have two child classes that require a very similar function, but there is a key difference between the two that causes
+you to be unable to use one base function. With polymorphism, you can make a 'moldable' base function for all of the similarities, and modify or 'overwrite'
+it to complete the specific behaviors of the given child class.
+
+public class Goal
+
+...
+
+public virtual void WriteGoal(int counter, string complete)
+    {
+        Console.Write($"{counter}. [{complete}] {_name} ({_description})");
+    }
+
+
+
+
+public class Checklist : Goal
+
+...
+
+public override void WriteGoal(int counter, string complete)
+    {
+        base.WriteGoal(counter, complete);
+        Console.Write($" -- Currently Completed {_timesCompleted}/{_timesNeeded}\r\n");
+    }
+
+
+The example given makes a function in the base class Goal to write out the details of the goal in a given format, however checklist goals need added
+details to it's formatting, so instead of writing an entirely new function with much of the same code, it overwrites the base function and adds on 
+the extra details with polymorphism.
