@@ -17,7 +17,7 @@ class Program
 
             if (option == "2")
             {
-                menu.ListGoals(); //Included counter for number of times Eternal goals have been completed
+                menu.ListGoals(); //Included counter for number of times Eternal goals have been completed 
                 Console.ReadLine();
             }
 
