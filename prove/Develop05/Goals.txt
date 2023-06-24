@@ -1,0 +1,4 @@
+100
+Simple; mow; mow the lawn;  100; True
+Eternal; do homework; do 30 minutes of homework; 25; 0
+Checklist; see cece; go on a date with cece; 50; 500; False; 0; 5
