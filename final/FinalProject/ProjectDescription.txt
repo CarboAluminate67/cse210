@@ -1,0 +1,12 @@
+Open-ended project description:
+    Myself and hundreds of thousands of other 'rocket nerds' are all very familiar with and play a game known as 'Kerbal Space Program'; A spaceflight simulator
+that uses realistic(ish) rocket designs made by the player in an effort to explore the in-game solar system. In the game there are dozens of choices of rocket
+engines all fitting their own needs and purposes. It can be difficult at times to choose one. As such for a while I have wanted to make a catalogue of engines
+that allows me to easily sort and decide on an engine to use in my next rocket design given my needs. 
+
+    In this open-ended final project I will create an OOP 'library' of the engines available in the game, with functions to sort, organize, search, and compare
+the engine choices. In the catalogue the user can create engines matching the specs of in-game engines or add their own engines. I will use a Menu class to
+navigate and sort the engines, and a base Engine class that covers all engines. Further I can have 3 subclasses: LiquidFuel, SolidFuel, and ColdGas engines. 
+Finally the LiquidFuel engines will branch out further to cover OpenCycle, FuelRich, OxRich, FullFlow, and Hypergolic engines. This is a total of 10 classes
+with 3 levels of inheritence. Each class will hold private stats unique to its engine type, and I will have an array of various Engine objects that can be
+manipulated in the Menu class to sort and search as I please.
