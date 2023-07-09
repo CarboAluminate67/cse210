@@ -1,0 +1,2 @@
+Fuel-Rich; rs25; hydrolox; 366; 452; 1850000; 206
+Cold; vernier; nitrogen; 167; 207; 1000; space shuttle

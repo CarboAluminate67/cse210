@@ -1,0 +1,19 @@
+public class Hypergolic : Liquid
+{
+    private int _burnTime;
+
+    public Hypergolic(string name, string fuel, int ispSea, int ispVac, int thrust, int chamber, int burnTime) : base(name, fuel, ispSea, ispVac, thrust, chamber)
+    {
+        _burnTime = burnTime;
+    }
+
+    public override string ToString()
+    {
+        return $"Hypergolic; {base.ToString()}; {_burnTime}";
+    }
+    public override void WriteEngine()
+    {
+        base.WriteEngine();
+        Console.Write("Hypergolic");
+    }
+}
