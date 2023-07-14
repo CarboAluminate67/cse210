@@ -25,8 +25,11 @@ class Program
                 case 5:
                     menu.Load();
                     break;
+                case 6:
+                    menu.Learn();
+                    break;
             }
-            if (response == 6)
+            if (response == 7)
             {
                 break;
             }

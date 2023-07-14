@@ -15,4 +15,15 @@ public class Solid : Engine
         base.WriteEngine();
         Console.Write("SRB");
     }
+    
+    public override string LearnEngine(int num)
+    {
+        num = 5;
+        string stat = base.LearnEngine(num);
+        if (stat.Length == 1)
+        {
+            return $"Burn Time: {_burnTime}";
+        }
+        return stat;
+    }
 }

@@ -42,4 +42,23 @@ public class Engine
         Console.Write($"{_name}: ");
     }
 
+    public virtual string LearnEngine(int num)
+    {
+        Random rand = new Random();
+        int statNum = rand.Next(num);
+        switch(statNum)
+        {
+            case 0:
+                return $"Fuel: {_fuel}";
+            case 1:
+                return $"Efficiency(sea): {_ispSea}";
+            case 2:
+                return $"Efficiency(vac): {_ispVac}";
+            case 3:
+                return $"Thrust: {_thrust}";
+            default:
+                return statNum.ToString();
+        }
+    }
+
 }

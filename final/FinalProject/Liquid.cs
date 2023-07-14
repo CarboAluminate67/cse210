@@ -16,4 +16,15 @@ public class Liquid : Engine
     {
         return $"{base.ToString()}; {_chamberPressure}";
     }
+
+    public override string LearnEngine(int num)
+    {
+        num = 5;
+        string stat = base.LearnEngine(num);
+        if (stat.Length == 1)
+        {
+            return $"Chamber Pressure: {_chamberPressure}";
+        }
+        return stat;
+    }
 }

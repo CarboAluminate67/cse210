@@ -4,6 +4,7 @@ using System;
 public class Menu
 {
     private List<Engine> _engines = new List<Engine>();
+    private int _points;
     public Menu()
     {
     }
@@ -16,14 +17,15 @@ public class Menu
     public int StartMenu()
     {
         Console.Clear();
-        Console.WriteLine($"\r\nWelcome to the interactive Rocket Engine Catalogue!");
+        Console.WriteLine($"\r\nWelcome to the interactive Rocket Engine Catalogue! Current points: {_points}");
         Console.WriteLine($"What action would you like to perform? \r\n");
         Console.WriteLine("  1. Add Engine");
         Console.WriteLine("  2. Remove Engine");
         Console.WriteLine("  3. List Engines");
         Console.WriteLine("  4. Save");
         Console.WriteLine("  5. Load");
-        Console.WriteLine($"  6. Quit \r\n");
+        Console.WriteLine("  6. Learn Engine");
+        Console.WriteLine($"  7. Quit \r\n");
 
         return int.Parse(Console.ReadLine());
     }
@@ -129,6 +131,8 @@ public class Menu
         File.WriteAllText($"./{_fileName}", String.Empty);
         using (StreamWriter outputFile = new StreamWriter(_fileName))
         {
+            outputFile.WriteLine(_points.ToString());
+            outputFile.WriteLine("Key: Type; Name; Fuel; Sea Level Efficiency; Vac Efficiency; Thrust(N); Other Statistics (Chamber pressure, burn time, or usage)");
             foreach (Engine engine in _engines)
             {
                 outputFile.WriteLine(engine.ToString());
@@ -143,6 +147,10 @@ public class Menu
         Console.Write("Filename: ");
         string fileName = Console.ReadLine();
         List<string> engineLines = new List<string>(File.ReadAllLines(fileName));
+        _points = int.Parse(engineLines[0]);
+        engineLines.RemoveAt(0);
+        engineLines.RemoveAt(1);
+
         foreach (string line in engineLines)
         {
             string[] parts = line.Split("; ");
@@ -165,5 +173,39 @@ public class Menu
                     break;
             }
         }
+    }
+
+    public void Learn()
+    {
+        Random rand = new Random();
+        Engine engine = _engines[rand.Next(_engines.Count)];
+
+        string guessing = engine.LearnEngine(4);
+        string[] guessParts = guessing.Split(": ");
+
+        Console.WriteLine("You have 3 tries.");
+        for(int tries = 3; tries > 0; tries--)
+        {
+            Console.Write($"What is {engine.GetName()}'s {guessParts[0]}? ");
+            string guess = Console.ReadLine().ToLower();
+            if (tries == 1)
+            {
+                Console.WriteLine($"\r\nYou ran our of tries! The correct answer was {guessParts[1]}. No points gained :(");
+                break;
+            }
+            if (guess == guessParts[1].ToLower())
+            {
+                Console.WriteLine($"\r\nCongrats! You Learned {engine.GetName()}'s {guessParts[0]}!");
+                int pointsGained = tries * 10;
+                Console.WriteLine($"You gained {pointsGained} points!");
+                _points += pointsGained;
+                break;
+            }
+            else
+            {
+                Console.WriteLine($"\r\nTry Again! You have {tries-1} tries left...");
+            }
+        }
+        Thread.Sleep(2000);
     }
 }

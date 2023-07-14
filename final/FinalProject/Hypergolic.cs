@@ -16,4 +16,15 @@ public class Hypergolic : Liquid
         base.WriteEngine();
         Console.Write("Hypergolic");
     }
+
+    public override string LearnEngine(int num)
+    {
+        num = 6;
+        string stat = base.LearnEngine(num);
+        if (stat.Length == 1)
+        {
+            return $"Burn Time: {_burnTime}";
+        }
+        return stat;
+    }
 }

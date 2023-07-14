@@ -1,2 +1,8 @@
-Fuel-Rich; rs25; hydrolox; 366; 452; 1850000; 206
+60
+Key: Type; Name; Fuel; Sea Level Efficiency; Vac Efficiency; Thrust(N); Other Statistics (Chamber pressure, burn time, or usage)
 Cold; vernier; nitrogen; 167; 207; 1000; space shuttle
+SRB; space shuttle; pban-apcp; 242; 242; 15000000; 127
+Open; merlin; rp-1; 282; 311; 845000; 97
+Oxygen-Rich; rd-180; rp-1; 311; 338; 3830000; 266
+Full-Flow; raptor; metholox; 327; 363; 2640000; 350
+Hypergolic; aj10-190; n2o4; 270; 316; 43700; 9; 54000

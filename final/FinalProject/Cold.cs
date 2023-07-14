@@ -16,4 +16,15 @@ public class Cold : Engine
         base.WriteEngine();
         Console.Write("Cold Gas Thruster");
     }
+
+    public override string LearnEngine(int num)
+    {
+        num = 5;
+        string stat = base.LearnEngine(num);
+        if (stat.Length == 1)
+        {
+            return $"Used On: {_use}";
+        }
+        return stat;
+    }
 }
