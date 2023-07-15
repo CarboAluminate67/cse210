@@ -1,0 +1,21 @@
+Abstraction is the process of breaking down into small functions that have specific tasks that they can perform extremely well. With abstraction you can 
+put these small functions together to create a large process that is moldable, readable, and easy to modify. In my final project I have over a dozen functions
+each dedicated to completing a small task. In each class the functions are put together to create a complex application. This makes it easier to change the
+way my program behaves by managing one small function rather than tweaking the entire program.
+
+Encapsulation is the abilitiy to 'hide' attributes or methods within a class, making them accessible only to that class. By doing this you promote the use of 
+abstraction and make classes interact more independently, allowing them to be modified, and shaped differently later on. In my project I have all my attributes
+set to private and even some private methods to perform tasks only inside that class. This allows me to change one class without needing to rely or being forced
+to change another class, making the project much more flexible.
+
+Inheritence is the ability to make specific 'subclasses' of one class. You can have one broad class that covers the vague functionality of an object, and
+subclasses that are all part of the base class. ie. All quarters are coins but not all coins are quarters. In my project I have 3 levels of inheritence to move
+from a basic engine, to liquid engine, to the very specific staged combustion engine. This allows me to treat all engines the same and manipulate them in the
+same ways, but each engines can have unique attributes and methods depending on its type. By doing this the project can change all the engine types at once 
+by just changing the code of the base class.
+
+Polymorphism is a method to allow code to perform different actions given different context. For example the same function can run different lines of code
+depending on the context in which it was called. By creating a broad function that covers the basic functionality, and overriding that function in child classes
+you can create one function that performs unique functions for every given child class. In my project I had functions that needed to run ever so slightly
+differently for different engine types, so i defined the broad form of the function in the base class, and make slight differences using overriding to the 
+function in the children classes. Doing this again allows me to modify the function for all the engine types at once by simply changing the base function.
