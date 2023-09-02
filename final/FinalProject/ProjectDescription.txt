@@ -10,3 +10,5 @@ navigate and sort the engines, and a base Engine class that covers all engines. 
 Finally the LiquidFuel engines will branch out further to cover OpenCycle, FuelRich, OxRich, FullFlow, and Hypergolic engines. This is a total of 10 classes
 with 3 levels of inheritence. Each class will hold private stats unique to its engine type, and I will have an array of various Engine objects that can be
 manipulated in the Menu class to sort and search as I please.
+
+*** NOTE: While developing this project I changed the design to instead record and sort real-world user input engines, such as Raptor, RS-25, etc. ***
